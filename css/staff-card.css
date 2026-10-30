@@ -1,0 +1,42 @@
+/* Staff / profile card: avatar (photo or initials), name, role, optional bio. */
+.ui-staff-grid { display: flex; flex-wrap: wrap; gap: 20px; margin: 16px 0; font-family: var(--ui-font); }
+.ui-staff-card {
+  flex: 0 1 calc((100% - 40px) / 3);
+  min-width: 260px;
+  padding: 20px 22px;
+  background: var(--ui-surface-alt);
+  color: var(--ui-text);
+  border-top: 4px solid var(--ui-accent);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.ui-staff-card--wide { flex: 1 1 100%; }
+
+.ui-staff-card__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--ui-accent);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+img.ui-staff-card__avatar { display: block; object-fit: cover; object-position: center top; }
+
+.ui-staff-card__name { margin: 0 0 2px; font-size: 1.0625rem; font-weight: 700; }
+.ui-staff-card__role { margin: 0; font-size: .8125rem; font-weight: 600; line-height: 1.4; color: var(--ui-accent); }
+.ui-staff-card__bio {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--ui-border);
+  font-size: .875rem;
+  line-height: 1.6;
+  color: #555;
+}
+.ui-staff-card__bio p { margin: 0 0 10px; }
+.ui-staff-card__bio p:last-child { margin-bottom: 0; }

@@ -1,0 +1,52 @@
+/* Accordion built on native <details>/<summary>: no JavaScript, keyboard and
+   screen-reader support come from the browser. */
+.ui-accordion { max-width: 860px; font-family: var(--ui-font); color: var(--ui-text); }
+.ui-accordion details {
+  margin: 0;
+  background: var(--ui-surface);
+  border-top: 1px solid var(--ui-border);
+  border-left: 4px solid transparent;
+}
+.ui-accordion details:last-of-type { border-bottom: 1px solid var(--ui-border); }
+.ui-accordion details[open] { border-left-color: var(--ui-accent); }
+
+.ui-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 20px 16px 20px 20px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.ui-accordion summary::-webkit-details-marker { display: none; }
+.ui-accordion summary::marker { content: ""; }
+.ui-accordion summary::after {
+  content: "+";
+  flex: none;
+  width: 24px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--ui-accent);
+}
+.ui-accordion details[open] > summary { color: var(--ui-accent); }
+.ui-accordion details[open] > summary::after { content: "\2212"; }
+.ui-accordion summary:hover { background: var(--ui-border-soft); }
+.ui-accordion summary:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: -3px; }
+
+.ui-accordion__panel { padding: 0 20px 24px; font-size: 1.0625rem; line-height: 1.6; }
+.ui-accordion__panel > :first-child { margin-top: 0; }
+.ui-accordion__panel > :last-child { margin-bottom: 0; }
+.ui-accordion__panel a { color: var(--ui-accent); text-decoration: underline; }
+.ui-accordion__panel a:hover { color: var(--ui-accent-dark); }
+
+@media (forced-colors: active) {
+  .ui-accordion details[open] { border-left-color: Highlight; }
+  .ui-accordion summary::after { color: ButtonText; }
+}

@@ -1,0 +1,14 @@
+/* Design tokens: override these on :root (or any wrapper) to re-theme every component. */
+:root {
+  --ui-accent: #cc0033;        /* links, icons, highlights (5.9:1 on white) */
+  --ui-accent-dark: #8e0d18;   /* hover state */
+  --ui-text: #222222;
+  --ui-muted: #666666;         /* 5.7:1 on white */
+  --ui-border: #d8d8d8;
+  --ui-border-soft: #efefef;
+  --ui-surface: #ffffff;
+  --ui-surface-alt: #f8f8f8;
+  --ui-focus: #222222;         /* focus ring colour */
+  --ui-radius: 16px;
+  --ui-font: inherit;
+}

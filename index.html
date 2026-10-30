@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI components demo</title>
+  <link rel="stylesheet" href="css/components.css">
+  <style>body { font-family: system-ui, sans-serif; line-height: 1.5; margin: 0; padding: 32px 16px; color: #222; } main { max-width: 1100px; margin: 0 auto; } h1 { margin: 0 0 8px; } h2 { margin: 56px 0 16px; padding-bottom: 8px; border-bottom: 1px solid #d8d8d8; } .lead { color: #666; max-width: 640px; }
+.theme-blue { --ui-accent: #0b5fa5; --ui-accent-dark: #084677; } .theme-dark-note { color:#666; font-size:.9rem; }</style>
+</head>
+<body>
+<main>
+<h1>UI components</h1>
+<p class="lead">Three reusable, framework-free components: a link card, an accordion and a staff profile card. Each one is styled only by <code>css/tokens.css</code> variables, so a theme change is a few lines.</p>
+
+<h2>Link card</h2>
+<div class="ui-card-grid" role="list" aria-label="Photo galleries">
+  <div class="ui-link-card" role="listitem">
+    <img class="ui-link-card__media" src="assets/sample-1.svg" alt="" width="768" height="576">
+    <div class="ui-link-card__body">
+      <div>
+        <p class="ui-link-card__title"><a href="#celtic">Celtic Pub Night</a></p>
+        <p class="ui-link-card__meta">21 photos</p>
+      </div>
+      <p class="ui-link-card__cta" aria-hidden="true">View gallery</p>
+    </div>
+  </div>
+  <div class="ui-link-card" role="listitem">
+    <img class="ui-link-card__media" src="assets/sample-2.svg" alt="" width="768" height="576">
+    <div class="ui-link-card__body">
+      <div>
+        <p class="ui-link-card__title"><a href="#fall">Fall Events</a></p>
+        <p class="ui-link-card__meta">12 photos</p>
+      </div>
+      <p class="ui-link-card__cta" aria-hidden="true">View gallery</p>
+    </div>
+  </div>
+  <div class="ui-link-card ui-link-card--no-media" role="listitem">
+    <div class="ui-link-card__body">
+      <div>
+        <p class="ui-link-card__title"><a href="#brunch">Spring Brunch</a></p>
+      </div>
+      <p class="ui-link-card__cta" aria-hidden="true">View gallery</p>
+    </div>
+  </div>
+</div>
+
+<h2>Accordion</h2>
+<div class="ui-accordion">
+  <details>
+    <summary>Who can join?</summary>
+    <div class="ui-accordion__panel">
+      <p>Anyone with a connection to the organization is welcome to apply.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What does membership include?</summary>
+    <div class="ui-accordion__panel">
+      <p>Members get access to events, reservations and shared spaces. <a href="#details">See full details</a>.</p>
+    </div>
+  </details>
+  <details>
+    <summary>How do I contact you?</summary>
+    <div class="ui-accordion__panel">
+      <p>Email <a href="mailto:info@example.com">info@example.com</a> or visit us in person.</p>
+    </div>
+  </details>
+</div>
+
+<h2>Staff card</h2>
+<div class="ui-staff-grid">
+  <div class="ui-staff-card ui-staff-card--wide">
+    <div class="ui-staff-card__avatar" aria-hidden="true">JD</div>
+    <h3 class="ui-staff-card__name">Jane Doe</h3>
+    <p class="ui-staff-card__role">Director</p>
+    <div class="ui-staff-card__bio">
+      <p>Jane leads the team and has spent ten years building community programs.</p>
+      <p>Outside of work she volunteers with local arts organizations.</p>
+    </div>
+  </div>
+  <div class="ui-staff-card">
+    <img class="ui-staff-card__avatar" src="assets/sample-3.svg" alt="Portrait of Sam Lee" width="64" height="64">
+    <h3 class="ui-staff-card__name">Sam Lee</h3>
+    <p class="ui-staff-card__role">Treasurer</p>
+  </div>
+  <div class="ui-staff-card">
+    <div class="ui-staff-card__avatar" aria-hidden="true">AR</div>
+    <h3 class="ui-staff-card__name">Alex Rivera</h3>
+    <p class="ui-staff-card__role">Events Coordinator</p>
+  </div>
+</div>
+
+<h2>Re-themed with tokens</h2>
+<p class="theme-dark-note">The same markup, with <code>--ui-accent</code> overridden on a wrapper (<code>.theme-blue</code>).</p>
+<div class="theme-blue">
+<div class="ui-accordion">
+  <details>
+    <summary>Who can join?</summary>
+    <div class="ui-accordion__panel">
+      <p>Anyone with a connection to the organization is welcome to apply.</p>
+    </div>
+  </details>
+  <details>
+    <summary>What does membership include?</summary>
+    <div class="ui-accordion__panel">
+      <p>Members get access to events, reservations and shared spaces. <a href="#details">See full details</a>.</p>
+    </div>
+  </details>
+  <details>
+    <summary>How do I contact you?</summary>
+    <div class="ui-accordion__panel">
+      <p>Email <a href="mailto:info@example.com">info@example.com</a> or visit us in person.</p>
+    </div>
+  </details>
+</div>
+<div class="ui-staff-grid">
+  <div class="ui-staff-card ui-staff-card--wide">
+    <div class="ui-staff-card__avatar" aria-hidden="true">JD</div>
+    <h3 class="ui-staff-card__name">Jane Doe</h3>
+    <p class="ui-staff-card__role">Director</p>
+    <div class="ui-staff-card__bio">
+      <p>Jane leads the team and has spent ten years building community programs.</p>
+      <p>Outside of work she volunteers with local arts organizations.</p>
+    </div>
+  </div>
+  <div class="ui-staff-card">
+    <img class="ui-staff-card__avatar" src="assets/sample-3.svg" alt="Portrait of Sam Lee" width="64" height="64">
+    <h3 class="ui-staff-card__name">Sam Lee</h3>
+    <p class="ui-staff-card__role">Treasurer</p>
+  </div>
+  <div class="ui-staff-card">
+    <div class="ui-staff-card__avatar" aria-hidden="true">AR</div>
+    <h3 class="ui-staff-card__name">Alex Rivera</h3>
+    <p class="ui-staff-card__role">Events Coordinator</p>
+  </div>
+</div>
+</div>
+</main>
+</body>
+</html>
