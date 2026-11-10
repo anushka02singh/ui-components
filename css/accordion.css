@@ -8,7 +8,7 @@
   border-left: 4px solid transparent;
 }
 .ui-accordion details:last-of-type { border-bottom: 1px solid var(--ui-border); }
-.ui-accordion details[open] { border-left-color: var(--ui-border) (#d8d8d8); }
+.ui-accordion details[open] { border-left-color: var(--ui-accent); }
 
 .ui-accordion summary {
   display: flex;
@@ -35,7 +35,7 @@
   line-height: 1;
   color: var(--ui-accent);
 }
-.ui-accordion details[open] > summary { color: var(--ui-accent); }
+.ui-accordion details[open] > summary { color: var(--ui-accent); background: var(--ui-border-soft); }
 .ui-accordion details[open] > summary::after { content: "\2212"; }
 .ui-accordion summary:hover { background: var(--ui-border-soft); }
 .ui-accordion summary:focus-visible { outline: 3px solid var(--ui-focus); outline-offset: -3px; }
