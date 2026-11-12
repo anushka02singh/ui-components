@@ -1,0 +1,76 @@
+/* service-card.css
+   Card grid for a list of services or topics: title, short line, bullets, optional link.
+   Markup: see components/service-card/example.html */
+
+.service-card-section {
+  --sc-accent: #cc0033;   /* top border, title and link color */
+  --sc-bg: #f2f2f2;       /* card background */
+  --sc-text: #222;
+  margin: 0 0 32px;
+}
+
+.service-card-lead {
+  font-size: 1.1em;
+  line-height: 1.55;
+  max-width: 760px;
+  margin: 0 0 20px;
+}
+
+/* Grid: 2 columns by default. Add --3 or --4 for more columns. */
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.service-card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.service-card-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.service-card {
+  background: var(--sc-bg);
+  border-top: 4px solid var(--sc-accent);
+  border-radius: 6px;
+  padding: 20px 20px 16px;
+  color: var(--sc-text);
+}
+
+.service-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.15em;
+  color: var(--sc-accent);
+}
+
+.service-card-tag {
+  margin: 0 0 10px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.service-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.service-card li {
+  margin: 0 0 4px;
+  line-height: 1.45;
+}
+
+.service-card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--sc-accent);
+}
+
+/* Tablet: 3 and 4 column grids drop to 2 */
+@media (max-width: 900px) {
+  .service-card-grid--3,
+  .service-card-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Phone: one column */
+@media (max-width: 640px) {
+  .service-card-grid,
+  .service-card-grid--3,
+  .service-card-grid--4 { grid-template-columns: 1fr; }
+}
