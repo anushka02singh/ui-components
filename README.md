@@ -1,12 +1,12 @@
 # UI components
 
-A small set of reusable, accessible UI components written in plain HTML and CSS: **link card**, **accordion** and **staff profile card**. No build step, no framework, no JavaScript.
+A small set of reusable, accessible UI components written in plain HTML and CSS: **link card**, **accordion**, **staff profile card** and **general card**. No build step, no framework, no JavaScript.
 
 They were extracted from real pages built for a university department site running on Drupal, where the editing tools only allow basic HTML and CSS. That constraint shaped the design: everything must survive a WYSIWYG editor and work without scripts.
 
 ## Preview
 
-Open `index.html` in a browser for a demo of all three components, plus a re-themed version.
+Open `index.html` in a browser for a demo of all four components, plus a re-themed version.
 
 ## Components
 
@@ -15,6 +15,7 @@ Open `index.html` in a browser for a demo of all three components, plus a re-the
 | Link card | Image + title card where the whole card is one link | [components/link-card](components/link-card/README.md) |
 | Accordion | Native `<details>` FAQ accordion | [components/accordion](components/accordion/README.md) |
 | Staff card | Photo or initials, name, role, bio | [components/staff-card](components/staff-card/README.md) |
+| General card | Grid of cards that each list a service or topic: title, short summary, bullets, optional link | [components/general-card](components/general-card/README.md) |
 
 ## Use it
 
